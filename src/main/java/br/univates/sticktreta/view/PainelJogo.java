@@ -24,10 +24,8 @@ public class PainelJogo extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
 
-        if (telaAtual != null) {
-            telaAtual.desenhar(g, getWidth(), getHeight());
-        }
+        super.paintComponent(g);
+        telaAtual.desenhar(g, getWidth(), getHeight());
     }
 }

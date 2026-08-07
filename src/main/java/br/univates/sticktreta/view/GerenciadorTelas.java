@@ -64,9 +64,11 @@ public class GerenciadorTelas {
             jogador2.atualizar();
 
             if (jogador1.getVida() <= 0 || jogador2.getVida() <= 0) {
+                TocadorSom.pararPassos();
                 estadoAtual = EstadoJogo.GAME_OVER;
                 TocadorSom.tocar("/assets/audio/Vitoria.wav");
                 MusicaFundo.parar();
+
             }
         }
     }

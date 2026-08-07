@@ -12,8 +12,6 @@ public class Main {
 
         janela.add(motor.getPainelJogo());
 
-        janela.setExtendedState(JFrame.MAXIMIZED_BOTH); // força tela cheia
-
         // Garante que o programa feche no Gerenciador de Tarefas ao clicar no "X"
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
