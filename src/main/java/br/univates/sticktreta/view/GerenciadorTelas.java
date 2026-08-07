@@ -59,12 +59,13 @@ public class GerenciadorTelas {
     }
 
     public void atualizar() {
-        if(estadoAtual == EstadoJogo.JOGANDO) {
+        if(estadoAtual == EstadoJogo.JOGANDO)
+        {
             jogador1.atualizar();
             jogador2.atualizar();
 
-            if (jogador1.getVida() <= 0 || jogador2.getVida() <= 0) {
-                TocadorSom.pararPassos();
+            if (jogador1.getVida() <= 0 || jogador2.getVida() <= 0)
+            {
                 estadoAtual = EstadoJogo.GAME_OVER;
                 TocadorSom.tocar("/assets/audio/Vitoria.wav");
                 MusicaFundo.parar();
@@ -79,7 +80,7 @@ public class GerenciadorTelas {
             System.exit(0);
         }
 
-        // Se a partida acabou e o jogador pressionou ENTER ou R, reinicia
+        // Se a partida acabou e o jogador pressionou R, reinicia
         if (estadoAtual == EstadoJogo.GAME_OVER && keyCode == KeyEvent.VK_R)
         {
             iniciarNovaPartida();

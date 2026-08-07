@@ -1,6 +1,7 @@
 package br.univates.sticktreta.view;
 
 import br.univates.sticktreta.model.StickFighter;
+import br.univates.sticktreta.util.TocadorSom;
 
 import java.awt.*;
 
@@ -82,7 +83,9 @@ public class HUD {
 
 
         // TELA GAME OVER
-        if (jogador1.getVida() <= 0 || jogador2.getVida() <= 0) {
+        if (jogador1.getVida() <= 0 || jogador2.getVida() <= 0)
+        {
+            TocadorSom.pararPassos();
             g.setColor(new Color(0, 0, 0, 170));
             g.fillRect(0, 0, larguraTela, alturaTela);
 

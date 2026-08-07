@@ -10,7 +10,7 @@ public class Configuracoes {
     public static final int VIDA_INICIAL = 100;
     public static final int VELOCIDADE_MOVIMENTO_X = 10;
     public static final int VELOCIDADE_MOVIMENTO_Y = -30;
-    public static final int DANO = 5;
+    public static final int DANO = 10;
     public static final int ALTURA_CORPO = 200;
     public static final int LARGURA_CORPO = 50;
     public static final int POSICAO_CHAO = 500;
