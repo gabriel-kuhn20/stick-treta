@@ -45,7 +45,6 @@ public class StickFighter extends Lutador implements Controlavel, Renderizavel {
 
     private BufferedImage[] carregarTiraAnimacao(String caminho, int totalFrames) {
         BufferedImage sheet = CarregadorSprites.carregarImagem(caminho);
-        if (sheet == null) return null;
 
         BufferedImage[] frames = new BufferedImage[totalFrames];
         int larguraFrame = sheet.getWidth() / totalFrames;

@@ -1,6 +1,5 @@
 package br.univates.sticktreta.view;
 
-import br.univates.sticktreta.config.Configuracoes;
 import br.univates.sticktreta.model.StickFighter;
 
 import java.awt.*;
@@ -9,8 +8,8 @@ public class HUD {
     public void desenhar (Graphics g, StickFighter jogador1, StickFighter jogador2) {
 
         // Obtém o centro REAL da janela desenhada (evita erros com bordas do Windows)
-        int larguraTela = (g.getClipBounds() != null) ? g.getClipBounds().width : Configuracoes.LARGURA_TELA;
-        int alturaTela = (g.getClipBounds() != null) ? g.getClipBounds().height : Configuracoes.ALTURA_TELA;
+        int larguraTela = g.getClipBounds().width;
+        int alturaTela =  g.getClipBounds().height;
 
         int centroX = larguraTela / 2;
         int larguraBarra = 500;
@@ -18,8 +17,8 @@ public class HUD {
         int posY = 50;
         int espacoCentro = 25;
 
-        int vidaJ1 = Math.max(0, jogador1.getVida());
-        int vidaJ2 = Math.max(0, jogador2.getVida());
+        int vidaJ1 = jogador1.getVida();
+        int vidaJ2 = jogador2.getVida();
 
         int larguraVidaJ1 = (int)(vidaJ1 * 5.0); // 100 HP = 500px
         int larguraVidaJ2 = (int)(vidaJ2 * 5.0);
