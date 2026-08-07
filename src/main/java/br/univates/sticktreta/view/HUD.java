@@ -108,6 +108,12 @@ public class HUD {
 
             g.drawString(mensagem, x, y);
 
+            g.setFont(new Font("Arial", Font.BOLD, 26));
+            g.setColor(Color.WHITE);
+            String msgRestart = "Pressione [R] para reiniciar";
+            int xRestart = (larguraTela - g.getFontMetrics().stringWidth(msgRestart)) / 2;
+            g.drawString(msgRestart, xRestart, y + 70);
+
         }
         desenharIndicadores(g, jogador1, jogador2);
     }

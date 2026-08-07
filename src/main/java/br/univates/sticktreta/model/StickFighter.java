@@ -165,7 +165,7 @@ public class StickFighter extends Lutador implements Controlavel, Renderizavel {
 
         if(imgAtual != null)
         {
-            // A imagem original do sprite é desenhada meio para cima, então ajustamos o Y um pouco (-20)
+            // A imagem original do sprite é desenhada meio para cima, então ajustamos o Y um pouco
             int ajusteY = y - 20;
             int ajusteX = x - 20;
 

@@ -40,7 +40,6 @@ public abstract class Lutador {
                 velocidadeY = 0;
             }
         }
-
     }
 
     public void receberDano() {
@@ -74,4 +73,5 @@ public abstract class Lutador {
     public void setY(int y) {
         this.y = y;
     }
+
 }

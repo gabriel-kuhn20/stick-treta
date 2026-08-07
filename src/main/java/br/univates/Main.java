@@ -10,7 +10,9 @@ public class Main {
         JFrame janela = new JFrame(Configuracoes.TITULO_JOGO);
         MotorJogo motor = new MotorJogo();
 
-        janela.add(motor);
+        janela.add(motor.getPainelJogo());
+
+        janela.setExtendedState(JFrame.MAXIMIZED_BOTH); // força tela cheia
 
         // Garante que o programa feche no Gerenciador de Tarefas ao clicar no "X"
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
