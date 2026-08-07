@@ -3,6 +3,7 @@ package br.univates.sticktreta.engine;
 import br.univates.sticktreta.config.Configuracoes;
 import br.univates.sticktreta.model.StickFighter;
 import br.univates.sticktreta.util.CarregadorSprites;
+import br.univates.sticktreta.util.MusicaFundo;
 import br.univates.sticktreta.view.HUD;
 
 import javax.swing.*;
@@ -28,6 +29,7 @@ public class MotorJogo extends JPanel implements Runnable, KeyListener {
         setBackground(Color.WHITE);
         setFocusable(true);
         addKeyListener(this);
+        MusicaFundo.tocar("/assets/audio/MusicaFundo.wav");
         imagemFundo = CarregadorSprites.carregarImagem("/assets/sprites/backgrounds/Cenario.png");
 
         jogador1 = new StickFighter(300, 650,
@@ -63,6 +65,7 @@ public class MotorJogo extends JPanel implements Runnable, KeyListener {
 
             if (jogador1.getVida() <= 0 || jogador2.getVida() <= 0) {
                 rodando = false;
+                MusicaFundo.parar();
             }
 
             try

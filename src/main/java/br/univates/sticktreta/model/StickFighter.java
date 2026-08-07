@@ -4,6 +4,7 @@ import br.univates.sticktreta.config.Configuracoes;
 import br.univates.sticktreta.interfaces.Controlavel;
 import br.univates.sticktreta.interfaces.Renderizavel;
 import br.univates.sticktreta.util.CarregadorSprites;
+import br.univates.sticktreta.util.TocadorSom;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -103,21 +104,25 @@ public class StickFighter extends Lutador implements Controlavel, Renderizavel {
         {
             indoEsquerda = true;
             viradoParaDireita = false;
+            TocadorSom.iniciarPassos("/assets/audio/Passo.wav");
         }
         else if(keyCode == teclaDir)
         {
             indoDireita = true;
             viradoParaDireita = true;
+            TocadorSom.iniciarPassos("/assets/audio/Passo.wav");
         }
         else if(keyCode == teclaPulo && noChao)
         {
             velocidadeY = Configuracoes.VELOCIDADE_MOVIMENTO_Y;
             noChao = false;
+            TocadorSom.pararPassos();
         }
         else if(keyCode == teclaAtaque && !isAtacando)
         {
             isAtacando = true;
             jaDeuDano = false;
+            TocadorSom.tocar("/assets/audio/soco.wav");
 
         }
     }
@@ -127,10 +132,12 @@ public class StickFighter extends Lutador implements Controlavel, Renderizavel {
         if(keyCode == teclaEsq)
         {
             indoEsquerda = false;
+            TocadorSom.pararPassos();
         }
         else if(keyCode == teclaDir)
         {
             indoDireita = false;
+            TocadorSom.pararPassos();
         }
     }
 

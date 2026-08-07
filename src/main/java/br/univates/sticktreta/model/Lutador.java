@@ -1,6 +1,7 @@
 package br.univates.sticktreta.model;
 
 import br.univates.sticktreta.config.Configuracoes;
+import br.univates.sticktreta.util.TocadorSom;
 
 import java.awt.*;
 
@@ -44,6 +45,7 @@ public abstract class Lutador {
 
     public void receberDano() {
        vida -= Configuracoes.DANO;
+        TocadorSom.tocar("/assets/audio/Dor.wav");
        if(vida <= 0) {
            vida = 0;
        }

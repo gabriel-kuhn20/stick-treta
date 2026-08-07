@@ -20,8 +20,8 @@ public class HUD {
         int vidaJ1 = jogador1.getVida();
         int vidaJ2 = jogador2.getVida();
 
-        int larguraVidaJ1 = (int)(vidaJ1 * 5.0); // 100 HP = 500px
-        int larguraVidaJ2 = (int)(vidaJ2 * 5.0);
+        int larguraVidaJ1 = (vidaJ1 * 5); // 100 HP = 500px
+        int larguraVidaJ2 = (vidaJ2 * 5);
 
         Font fonteHUD = new Font("Arial", Font.BOLD, 20);
         g.setFont(fonteHUD);
